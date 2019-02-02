@@ -1,7 +1,8 @@
-import { Component } from "../../../node_modules/@angular/core";
+import { Component } from '../../../node_modules/@angular/core';
 
 @Component({
-    selector:'meu-primeiro-component',
+    // tslint:disable-next-line:component-selector
+    selector: 'meu-primeiro-component',
     template: `<p> Meu primeiro component com Angular 2!</p>`
 })
-export class MeuPrimeiroComponent{}
+export class MeuPrimeiroComponent {}
