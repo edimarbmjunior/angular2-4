@@ -21,3 +21,11 @@
 <div style="text-align:center">
   <app-data-binding></app-data-binding>
 </div>  
+<br/>
+<div style="text-align:center">
+  <app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo" ></app-ciclo>
+  <button class="btn btn-warning" (click)="mudarValor()"> Mudar Valor </button>
+  <br/>
+  <button class="btn btn-warning" (click)="destruirCiclo()">Deletar</button>
+</div>
+<br/>
