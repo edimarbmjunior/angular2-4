@@ -16,6 +16,8 @@
       <br/>
       <img bind-src="urlImagem"> -->
   </article>
+</section>
+<section class="property-binding">
   <br/>
   <article>
       <h3>Class e Style Binding</h3>
@@ -57,3 +59,41 @@
 
   <br/>
 </section>
+
+<section class="property-binding">
+    <article>
+      <h3>Event binding</h3>
+      <div>
+        <button (click)="botaoClicado()" class="btn btn-primary">Me clique</button>
+
+        <br/><br/>
+
+        <input type="text" (keyup)="onKeyUp($event)"
+                            (keyup.enter)="salvarValor($event.target.value)"
+                            (blur)="salvarValor(campoInput.value)"
+                            #campoInput>
+        <br/>
+        <p>Valor atual: {{ valorAtual }}</p>
+        <p>Valor salvo: {{ valorSalvo }}</p>
+        <br/>
+        <span (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highlight]="isMouseOver">
+          Passe o mouse aqui!
+        </span>
+      </div>
+    </article>
+</section>
+<br/>
+
+<section class="input-output-properties">
+    <article>
+      <h3>Input/Output Properties</h3>
+
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+      <br/>
+
+      <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></contador>
+    </article>
+</section>
+<br/>

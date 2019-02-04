@@ -1,9 +1,5 @@
 # angular2-4
 
-## Decrição
-
-## Getting Started
-
 ### Pré-requisito
 
 Instalar node e npm.
@@ -15,11 +11,23 @@ Após baixar o projeto deve ser executado alguns comandos.
  ```
  npm install -g typescript
  npm i -g @angular/cli
- npm install
+ ```
+### Sub-Projeto primeiro-projeto
+
+ ```
+ *npm install* - Caso seja necessário pois, para instalar os modulos
  ```
 
-### data-binding
+### Sub-Projeto hello-typescript
+
+ ```
+ *npm install* - Caso seja necessário pois, para instalar os modulos
+ ```
+
+### Sub-Projeto data-binding
+
 ````
+ *npm install* - Caso seja necessário pois, para instalar os modulos
 npm install ng2-bootstrap bootstrap --save
 ng add ngx-bootstrap
 ```
