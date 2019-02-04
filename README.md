@@ -14,8 +14,15 @@ Após baixar o projeto deve ser executado alguns comandos.
 
  ```
  npm install -g typescript
+ npm i -g @angular/cli
  npm install
  ```
+
+### data-binding
+````
+npm install ng2-bootstrap bootstrap --save
+ng add ngx-bootstrap
+```
 
 ## Execução
 
