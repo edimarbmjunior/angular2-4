@@ -39,13 +39,31 @@ ng add ngx-bootstrap
 Serve para nada, foi um teste de um comando.
 ```
 
-## Execução
+## Execução em desenvolvimento
 
 Para executar basta utilizar o comando:
 
  ```
  ng serve
  *caso queira mudar a porta adicionar o comando - exemplo: "*ng serve --port 5050*"
+ ```
+
+## Execução da build de desenvolvimento
+
+Para executar basta utilizar o comando:
+
+ ```
+ ng build ou ng build --dev
+ cd dist
+ http-server - *Caso não tenha o simulador de servidor http no nodeJS, executar o comando "*npm install -g http-server*"
+ ```
+
+## Geração da build de produção
+
+ ```
+ ng build --prod
+ cd dist
+ http-server - *Caso não tenha o simulador de servidor http no nodeJS, executar o comando "*npm install -g http-server*"
  ```
 
 ## Dependencias
