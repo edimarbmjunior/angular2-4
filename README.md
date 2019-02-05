@@ -35,6 +35,10 @@ ng add ngx-bootstrap
 
 ### Sub-Projeto diretivas
 
+```
+Serve para nada, foi um teste de um comando.
+```
+
 ## Execução
 
 Para executar basta utilizar o comando:
@@ -46,10 +50,8 @@ Para executar basta utilizar o comando:
 
 ## Dependencias
 
-* http          - *dependencies*
 * ng2-bootstrap - *dependencies*
 * ngx-bootstrap - *dependencies*
-
 
 ## Autor
 
