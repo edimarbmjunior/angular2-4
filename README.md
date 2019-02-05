@@ -6,12 +6,13 @@ Instalar node e npm.
 
 ## Instalação
 
-Após baixar o projeto deve ser executado alguns comandos.
+Antes de baixar o projeto deve ser executado alguns comandos.
 
  ```
  npm install -g typescript
  npm i -g @angular/cli
  ```
+
 ### Sub-Projeto primeiro-projeto
 
  ```
@@ -26,39 +27,29 @@ Após baixar o projeto deve ser executado alguns comandos.
 
 ### Sub-Projeto data-binding
 
-````
- *npm install* - Caso seja necessário pois, para instalar os modulos
-npm install ng2-bootstrap bootstrap --save
+```
+*npm install* - Caso seja necessário pois, para instalar os modulos
+*npm install ng2-bootstrap bootstrap --save* - não funciona bem
 ng add ngx-bootstrap
 ```
+
+### Sub-Projeto diretivas
 
 ## Execução
 
 Para executar basta utilizar o comando:
 
  ```
- node ./bin/server.js
- ```
-
-### OU
-
- Após a instalação do nodemon, executar o servidor utlizando nodemon, pois quando executado depois de cada alteração de arquivo do projeto e servidor é reiniciado automaticamente.
- ```
- nodemon ./bin/server.js
+ ng serve
+ *caso queira mudar a porta adicionar o comando - exemplo: "*ng serve --port 5050*"
  ```
 
 ## Dependencias
 
-* body-parser - *dependencies*
-* debug - *dependencies*
-* express - *dependencies*
-* guid - *dependencies*
-* http - *dependencies*
-* mongoose - *dependencies*
-* md5 - *dependencies*
-* azure-storage - *dependencies*
-* jsonwebtoken - *dependencies*
-* nodemon - *devDependencies*
+* http          - *dependencies*
+* ng2-bootstrap - *dependencies*
+* ngx-bootstrap - *dependencies*
+
 
 ## Autor
 
