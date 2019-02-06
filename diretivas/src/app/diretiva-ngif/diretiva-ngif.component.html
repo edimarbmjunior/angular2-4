@@ -1,0 +1,42 @@
+
+<h5>*ngIf - String</h5>
+
+<div *ngIf="cursos.length > 0">
+  Lista de cursos aqui.
+</div>
+
+<div *ngIf="cursos.length == 0; else cursoNaoVazio">
+  Lista de cursos vazia.
+</div>
+
+<ng-template #cursoNaoVazio>
+  Teste de diretiva else.
+</ng-template>
+
+<br/>
+<h5>*ngIf - Boolean</h5>
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div *ngIf="!mostrarCursos; else cursoNaoVazio2">
+  Lista de cursos vazia.
+</div>
+
+<ng-template #cursoNaoVazio2>
+  Teste de diretiva else.
+</ng-template>
+
+<br>
+<button (click)="onMudarStatusMostrarCurso()">Mudar Status</button>
+
+<h5>hidden como alternativa</h5>
+<div [hidden]="mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div [hidden]="!mostrarCursos">
+  Lista de cursos vazia.
+</div>
+
+<br>

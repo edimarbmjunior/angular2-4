@@ -37,7 +37,7 @@ Antes de baixar o projeto deve ser executado alguns comandos.
 ### Sub-Projeto diretivas
 
 ```
-Serve para nada, foi um teste de um comando.
+Brincar com diretivas
 ```
 
 ### Sub-Projeto angular-cli-bibliotecas-externas
