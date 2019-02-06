@@ -16,21 +16,22 @@ Antes de baixar o projeto deve ser executado alguns comandos.
 ### Sub-Projeto primeiro-projeto
 
  ```
+ *npm i ajv* - para procurar erros nas instalações/atualizações dos modulos
  *npm install* - Caso seja necessário pois, para instalar os modulos
  ```
 
 ### Sub-Projeto hello-typescript
 
  ```
+ *npm i ajv* - para procurar erros nas instalações/atualizações dos modulos
  *npm install* - Caso seja necessário pois, para instalar os modulos
  ```
 
 ### Sub-Projeto data-binding
 
 ```
-*npm install* - Caso seja necessário pois, para instalar os modulos
-*npm install ng2-bootstrap bootstrap --save* - não funciona bem
-ng add ngx-bootstrap
+ *npm i ajv* - para procurar erros nas instalações/atualizações dos modulos
+ *npm install* - Caso seja necessário pois, para instalar os modulos
 ```
 
 ### Sub-Projeto diretivas
@@ -39,7 +40,15 @@ ng add ngx-bootstrap
 Serve para nada, foi um teste de um comando.
 ```
 
-## Execução em desenvolvimento
+### Sub-Projeto angular-cli-bibliotecas-externas
+
+```
+ *npm i ajv* - para procurar erros nas instalações/atualizações dos modulos
+ *npm install* - Caso seja necessário pois, para instalar os modulos
+```
+
+## Execução
+### Em desenvolvimento
 
 Para executar basta utilizar o comando:
 
@@ -48,7 +57,7 @@ Para executar basta utilizar o comando:
  *caso queira mudar a porta adicionar o comando - exemplo: "*ng serve --port 5050*"
  ```
 
-## Execução da build de desenvolvimento
+### build de desenvolvimento
 
 Para executar basta utilizar o comando:
 
@@ -58,18 +67,26 @@ Para executar basta utilizar o comando:
  http-server - *Caso não tenha o simulador de servidor http no nodeJS, executar o comando "*npm install -g http-server*"
  ```
 
-## Geração da build de produção
+### build de produção
 
  ```
  ng build --prod
  cd dist
+ **Comandos abaixo não é necessário**
  http-server - *Caso não tenha o simulador de servidor http no nodeJS, executar o comando "*npm install -g http-server*"
  ```
 
 ## Dependencias
 
-* ng2-bootstrap - *dependencies*
-* ngx-bootstrap - *dependencies*
+* ng2-bootstrap  - *dependencies*
+* ngx-bootstrap  - *dependencies*
+* bootstrap(angular cli) - *dependencies*
+* jquery(v2.2.4) - *dependencies*
+* popper         - *dependencies*
+* materialize    - *dependencies*
+* hammerjs       - *dependencies*
+* lodash         - *dependencies*
+* @types/lodash  - *dependencies*
 
 ## Autor
 
