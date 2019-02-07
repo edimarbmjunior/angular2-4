@@ -81,7 +81,7 @@ Para executar basta utilizar o comando:
 * ng2-bootstrap  - *dependencies*
 * ngx-bootstrap  - *dependencies*
 * bootstrap(angular cli) - *dependencies*
-* jquery(v2.2.4) - *dependencies*
+* jquery(v2.2.4/v3.3.1)  - *dependencies*
 * popper         - *dependencies*
 * materialize    - *dependencies*
 * hammerjs       - *dependencies*
