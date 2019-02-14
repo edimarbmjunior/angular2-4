@@ -4,3 +4,35 @@
 </p>
 
 <button appFundoAmarelo>Botão com fundo</button>
+
+<p highlightMouse>
+  Texto com highlight quando passo o mouse.
+</p>
+
+<p [highlight]="'red'" [defaulColor]="'grey'">
+  Texto com highlight e cores customizadas.
+</p>
+
+<br/>
+<h5>*ngElse - Boolean</h5>
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div *ngElse="mostrarCursos">
+  Lista de cursos vazia.
+</div>
+
+<br>
+<button (click)="onMudarStatusMostrarCurso()">
+  Mudar Status
+</button>
+
+<br/>
+
+<!-- Não funciona pesquisar o porque de não funcionar -->
+<!-- <template [ngElse]="mostrarCursos">
+  <div>
+    Não existe cursos a serem listados.
+  </div>
+</template> -->
