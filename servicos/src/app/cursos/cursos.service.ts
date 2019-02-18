@@ -1,14 +1,24 @@
+import { Injectable, EventEmitter } from '@angular/core';
+
+@Injectable()
 export class CursosServices {
 
+    emitirCursoCriado = new EventEmitter<string>();
+    static criouNovoCurso = new EventEmitter<string>();
+
+    cursos: string[] = ['Angular 2', 'Java', 'Phonegap'];
+
+    constructor(){
+        console.log('Criação da instância "CursosServices"!')
+    }
+
     getCursos(){
-        return ['Angular 2', 'Java', 'Phonegap'];
+        return this.cursos;
     }
 
-    getProfessores(){
-        return ['Alencar', 'Fernanda', 'Djavan'];
-    }
-
-    getMaticulas(){
-        return [2018221155, 2018221140, 2018221151, 2018221131, 2018221181, 2018221198];
+    addCurso(curso: string){
+        this.cursos.push(curso);
+        this.emitirCursoCriado.emit(curso);
+        CursosServices.criouNovoCurso.emit(curso);
     }
 }

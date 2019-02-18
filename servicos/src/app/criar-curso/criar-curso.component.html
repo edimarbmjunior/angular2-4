@@ -1,0 +1,12 @@
+<h2>Lista de cursos2</h2>
+
+<input type="text" #cursoInput>
+<br/>
+<button (click)="onAddSalvar(cursoInput.value)">Salvar</button>
+<br/>
+<ul>
+  <li *ngFor="let curso of cursos" > {{ curso }}</li>
+</ul>
+<br/>
+<app-receber-curso-criado></app-receber-curso-criado>
+<br/>
