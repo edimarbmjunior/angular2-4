@@ -20,5 +20,4 @@ export class CriarCursoComponent implements OnInit {
   onAddSalvar(curso: string){
     this.cursoService.addCurso(curso);
   }
-
 }
