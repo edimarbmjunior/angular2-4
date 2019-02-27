@@ -7,6 +7,9 @@ import { CamelCasePipe } from './pipeNovo/camel-case.pipe';
 import { registerLocaleData } from '../../node_modules/@angular/common';
 import br from '@angular/common/locales/br';
 import { SettingsService } from './shared/settings.service';
+import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FormsModule } from "@angular/forms";
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 
 registerLocaleData(br);
 
@@ -14,10 +17,13 @@ registerLocaleData(br);
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    FiltroArrayPipe,
+    FiltroArrayImpuroPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     {
