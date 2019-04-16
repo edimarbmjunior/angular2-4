@@ -11,6 +11,7 @@ Antes de baixar o projeto deve ser executado alguns comandos.
  ```
  npm install -g typescript
  npm i -g @angular/cli
+ npm i -g rxjs-tslint
  ```
 
 ### Sub-Projeto primeiro-projeto
