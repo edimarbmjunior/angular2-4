@@ -12,12 +12,13 @@ import { CursosModule } from './cursos/cursos.module';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { CursosService } from './cursos/servicos/cursos.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component'; */
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
     /* CursosComponent,
     CursoDetalheComponent,
     CursoNaoEncontradoComponent */
@@ -27,7 +28,8 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
     FormsModule,
     //routing
     CursosModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlunosModule
   ],
   providers: [/* CursosService */],
   bootstrap: [AppComponent]
