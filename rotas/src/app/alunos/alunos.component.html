@@ -4,9 +4,12 @@
       Lista de Alunos
     </p>
     <div class="collection">
-      <a class="collection-item"
-      *ngFor="let aluno of alunos"
-      [routerLink]="[aluno.id]" >{{ aluno.nome }}</a>
+      <a
+        class="collection-item"
+        *ngFor="let aluno of alunos"
+        [routerLink]="[aluno.id]" >
+          {{ aluno.nome }} / {{ aluno.id }}
+      </a>
     </div>
   </div>
 

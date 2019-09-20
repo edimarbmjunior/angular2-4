@@ -23,17 +23,7 @@ export class AlunoDetalheComponent implements OnInit {
     this.inscricao = this.route.params.subscribe(
       (params: any) => {
         let id = params['id'];
-
-        this.aluno = this.alunoService.getAluno(id);
-      }
-    );
-  }
-
-  ngDoCheck(){
-    this.inscricao = this.route.params.subscribe(
-      (params: any) => {
-        let id = params['id'];
-
+        console.log('Id: ', id);
         this.aluno = this.alunoService.getAluno(id);
       }
     );
