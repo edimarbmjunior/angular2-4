@@ -6,6 +6,7 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 
 const alunosRoutes: Routes = [
+  //Pode apagar para poder utilizar o lazy loading no path de alunos
     { path: 'alunos'      , component: AlunosComponent, children:[
         { path: 'novo' , component: AlunoFormComponent },
         { path: ':id'  , component: AlunoDetalheComponent },

@@ -8,8 +8,8 @@ import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.comp
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 const APP_ROUTES: Routes = [
-    { path: ''      , component: HomeComponent },
-    { path: 'login' , component: LoginComponent },
+    //{ path: ''      , component: HomeComponent },
+    { path: '' , component: LoginComponent },
     { path: 'curso/:id', component: CursoDetalheComponent },
     { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
     { path: 'cursos', component: CursosComponent }
