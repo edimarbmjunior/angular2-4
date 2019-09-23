@@ -19,20 +19,25 @@
 </ul> -->
 <nav  *ngIf="mostrarMenu">
   <div class="nav-wrapper">
-    <a routerLink="" class="brand-logo right">Rotas NG Materialize</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <a class="brand-logo right">Rotas NG Materialize</a>
+    <ul class="left hide-on-med-and-down">
       <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
       <li routerLinkActive="active"><a routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></li>
       <!--li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Curso com id</a></li-->
       <li routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
+      <li>
+        <a class="waves-effect waves-light btn-flat" (click)="sair()">
+          <i class="material-icons left">cancel</i>
+          Sair
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
 
-
-  <div class="container">
-    <!-- <p>Entre com o id do curso</p>
-    <input #idCurso type="text" name="" value="">
-    <br/> -->
-    <router-outlet></router-outlet>
-  </div>
+<div class="container">
+  <!-- <p>Entre com o id do curso</p>
+  <input #idCurso type="text" name="" value="">
+  <br/> -->
+  <router-outlet></router-outlet>
+</div>

@@ -3,14 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './guards/auth.guards';
 
 const appRoutes: Routes = [
     //usando lazy loading para a rota de cursos
-    { path: 'cursos', loadChildren: './cursos/cursos.module#CursosModule'},
+    { path: 'cursos',
+      loadChildren: './cursos/cursos.module#CursosModule',
+      canActivate: [AuthGuard]
+    },
     //usando lazy loading para a rota de alunos
     //{ path: 'alunos', loadChildren: './alunos/alunos.module#AlunosModule'},
     { path: 'login' , component: LoginComponent },
-    { path: ''      , component: HomeComponent }
+    { path: ''      , component: HomeComponent, canActivate:[AuthGuard] }
 ];
 
 @NgModule({

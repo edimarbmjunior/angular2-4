@@ -21,4 +21,16 @@ export class AppComponent {
       mostrar => this.mostrarMenu = mostrar
     );
   }
+
+  ngOnChanges(){
+    console.log('ngDoCheck');
+    this.authService.mostrarMenuEmmitter.subscribe(
+      mostrar => this.mostrarMenu = mostrar
+    );
+  }
+
+  sair(){
+    //console.log('App.Component-Sair');
+    this.authService.fazerLogout();
+  }
 }

@@ -14,6 +14,8 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario){
 
+    console.log('Usuario:', usuario);
+
     if(usuario.nome === 'usuario@gmail.com'
       && usuario.senha === '123456'){
         this.usuarioAutenticado = true;
@@ -23,5 +25,21 @@ export class AuthService {
         this.mostrarMenuEmmitter.emit(false);
         this.usuarioAutenticado = false;
       }
+  }
+
+  fazerLogout(){
+
+    if(this.usuarioAutenticado){
+        this.usuarioAutenticado = false;
+        this.mostrarMenuEmmitter.emit(false);
+        this.router.navigate(['/login']);
+      }else{
+        this.mostrarMenuEmmitter.emit(false);
+        this.router.navigate(['/login']);
+      }
+  }
+
+  retornaUsuarioAutenticado(){
+    return this.usuarioAutenticado;
   }
 }

@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guards';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AuthService } from './login/auth.service';
     AlunosModule, //Pode retirar para está sendo usado "lazy Loading" no path de alunos
     AppRoutingModule
   ],
-  providers: [/* CursosService */ AuthService],
+  providers: [/* CursosService */ AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
