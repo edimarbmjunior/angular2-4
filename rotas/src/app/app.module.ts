@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guards';
+import { CursosGuard } from './guards/cursos.guard';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { AuthGuard } from './guards/auth.guards';
     AlunosModule, //Pode retirar para está sendo usado "lazy Loading" no path de alunos
     AppRoutingModule
   ],
-  providers: [/* CursosService */ AuthService, AuthGuard],
+  providers: [/* CursosService */
+    AuthService,
+    AuthGuard,
+    CursosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
