@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   private usuarioAutenticado: boolean = false;
+  private usuarioLogado:any;
   mostrarMenuEmmitter = new EventEmitter<Boolean>();
 
   constructor(private router: Router) { }
@@ -20,6 +21,7 @@ export class AuthService {
       && usuario.senha === '123456'){
         this.usuarioAutenticado = true;
         this.mostrarMenuEmmitter.emit(true);
+        this.usuarioLogado = usuario;
         this.router.navigate(['/']);
       }else{
         this.mostrarMenuEmmitter.emit(false);
@@ -39,7 +41,11 @@ export class AuthService {
       }
   }
 
-  retornaUsuarioAutenticado(){
+  retornaUsuarioAutenticado():boolean{
     return this.usuarioAutenticado;
+  }
+
+  retornaUsuarioLogado():[]{
+    return this.usuarioLogado;
   }
 }
