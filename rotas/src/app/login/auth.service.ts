@@ -15,7 +15,7 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario){
 
-    console.log('Usuario:', usuario);
+    //console.log('Usuario:', usuario);
 
     if(usuario.nome === 'usuario@gmail.com'
       && usuario.senha === '123456'){

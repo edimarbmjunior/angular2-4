@@ -23,7 +23,6 @@ export class AppComponent {
   }
 
   ngOnChanges(){
-    console.log('ngDoCheck');
     this.authService.mostrarMenuEmmitter.subscribe(
       mostrar => this.mostrarMenu = mostrar
     );

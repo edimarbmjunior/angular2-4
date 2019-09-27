@@ -12,6 +12,7 @@ export class AlunoFormComponent implements OnInit {
 
   aluno: any;
   inscricao: Subscription;
+  private formMudou:boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,4 +32,12 @@ export class AlunoFormComponent implements OnInit {
     );
   }
 
+  onInput(){
+    this.formMudou = true;
+    //console.log('aluno:', this.aluno);
+  }
+
+  verificaPermissaoMudarRota():boolean{
+    return this.formMudou;
+  }
 }
