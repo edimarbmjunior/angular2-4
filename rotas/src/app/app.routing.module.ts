@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './guards/auth.guards';
 import { CursosGuard } from './guards/cursos.guard';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 const appRoutes: Routes = [
     //usando lazy loading para a rota de cursos
@@ -17,7 +18,9 @@ const appRoutes: Routes = [
     //usando lazy loading para a rota de alunos
     //{ path: 'alunos', loadChildren: './alunos/alunos.module#AlunosModule'},
     { path: 'login' , component: LoginComponent },
-    { path: ''      , component: HomeComponent, canActivate:[AuthGuard] }
+    { path: 'home'  , component: HomeComponent, canActivate:[AuthGuard] },
+    { path: ''      , redirectTo: '/home', pathMatch: 'full' },
+    { path: '**'    , component: PaginaNaoEncontradaComponent, canActivate:[AuthGuard] }
 ];
 
 @NgModule({
