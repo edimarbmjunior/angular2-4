@@ -7,12 +7,17 @@ import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 import { AuthGuard } from '../guards/auth.guards';
 import { AlunosGuard } from '../guards/alunos.guard';
 import { AlunosDeactivateGuard } from '../guards/alunos-deactivate.guard';
+import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
 const alunosRoutes: Routes = [
   //Pode apagar para poder utilizar o lazy loading no path de alunos
     { path: 'alunos'      , component: AlunosComponent, children:[
         { path: 'novo' , component: AlunoFormComponent },
-        { path: ':id'  , component: AlunoDetalheComponent },
+        {
+          path: ':id'  ,
+          component: AlunoDetalheComponent,
+          resolve: {aluno : AlunoDetalheResolver}
+        },
         {
           path: ':id/edit' , component: AlunoFormComponent,
           canDeactivate: [AlunosDeactivateGuard]
