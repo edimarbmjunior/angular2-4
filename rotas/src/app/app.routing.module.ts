@@ -11,7 +11,8 @@ const appRoutes: Routes = [
     { path: 'cursos',
       loadChildren: './cursos/cursos.module#CursosModule',
       canActivate: [AuthGuard],
-      canActivateChild: [CursosGuard]
+      canActivateChild: [CursosGuard],
+      canLoad: [AuthGuard]
     },
     //usando lazy loading para a rota de alunos
     //{ path: 'alunos', loadChildren: './alunos/alunos.module#AlunosModule'},
