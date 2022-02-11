@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "@types/lodash": "^4.14.120",
-    "ajv": "^6.8.1",
+    "ajv": "^6.12.3",
     "angular2-materialize": "^15.1.10",
     "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
